@@ -4,7 +4,7 @@ This is the official code for the work titled:
 
 prerprint: 
 
-![plot](./images/l1_2d_isotropic.pdfraw=true)
+![plot](./images/pull.png)
 
 <img src="https://https://github.com/MotasemAlfarra/ANCER/blob/main/images/l1_2d_isotropic.pdf" width="80%" alt="pipeline" align=center>
 
