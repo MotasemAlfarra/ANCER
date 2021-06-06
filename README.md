@@ -1,5 +1,6 @@
-This code is submitted for the reproducing the results of an anonymous NeurIPS submission titled
+This is the official code for the work titled:
 **"ANCER: Anisotropic Certification via Sample-wise Volume Maximization"**.
+prerprint: 
 
 ### Setting up
 
