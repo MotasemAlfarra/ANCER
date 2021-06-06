@@ -4,8 +4,7 @@ This is the official code for the work titled:
 
 prerprint: 
 
-![Image]
-(https://https://github.com/MotasemAlfarra/ANCER/blob/main/images/l1_2d_isotropic.pdf)
+![plot](./images/l1_2d_isotropic.pdf)
 
 <img src="https://https://github.com/MotasemAlfarra/ANCER/blob/main/images/l1_2d_isotropic.pdf" width="80%" alt="pipeline" align=center>
 
