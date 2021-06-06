@@ -1,6 +1,6 @@
-This is the official code for the work titled:
-
 # ANCER: Anisotropic Certification via Sample-wise Volume Maximization
+
+This is the official code for the work titled:"ANCER: Anisotropic Certification via Sample-wise Volume Maximization"
 
 prerprint: 
 
