@@ -41,13 +41,13 @@ followed by the command:
 
 ```
 python ancer.py --norm l2 \
---model pretrained_models/cohen_0.12.tar \
---isotropic-file isotropic_dd_sigmas/cohen_0.12.pth \
+--model ${PATH_TO_PRETRAINED_MODEL} \
+--isotropic-file ${PATH_TO_ISOTROPIC_SIGMA} \
 --model-type resnet18 --dataset cifar10 \
 --output-folder anisotropic_sigmas_for_cohen
 ```
-
-Note that this will run ANCER's optimization with the default hyperparameters detailed in our appendix for a model trained with [Cohen *et al.*'s framework](https://arxiv.org/abs/1902.02918) with sigma=0.12. The output of this code will be a set of sigmas saved in `output-folder` for CIFAR-10 testset.
+where  `--model-type` coule be either `resnet18` or `wideresnet40` for CIFAR10 or  `resnet50` for ImageNet. 
+Note that this will run ANCER's optimization with the default hyperparameters detailed in our appendix for a the pretrained model with the isotropic sigmas as initialization. The output of this code will be a set of sigmas saved in `output-folder` for CIFAR-10 testset.
 
 Next, you need to certify the same model with the obtained anisotropic smoothing parameters. This requires running the following command:
 
@@ -57,7 +57,7 @@ python certify.py --norm l2 \
 --method ancer \
 --outfile results.txt \
 --model-type resnet18 --dataset cifar10 \
---model pretrained_models/cohen_0.12.tar \
+--model ${PATH_TO_PRETRAINED_MODEL} \
 --optimized-sigmas anisotropic_sigmas_for_cohen
 ```
 
