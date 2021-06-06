@@ -4,6 +4,9 @@ This is the official code for the work titled:
 
 prerprint: 
 
+<img src="https://https://github.com/MotasemAlfarra/ANCER/blob/main/images/l1_2d_isotropic.pdf" width="80%" alt="pipeline" align=center>
+
+
 ### Setting up
 
 To reproduce our results, first you need to install a [Conda](https://www.anaconda.com/) environment with the right dependencies. You can do so by running the following line from the main directory:
