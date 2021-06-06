@@ -21,7 +21,8 @@ Now, you are ready to reproduce our results.
 ### Running experiments
 
 Note that ANCER requires a trained model and the corresponding isotropic sigmas produced with the code from ["Data Dependent Randomized Smoothing" (link to repository)](https://github.com/MotasemAlfarra/Data_Dependent_Randomized_Smoothing).
-Given the space constraints of the supplementary material (limited to 100MB), we provided one of the ResNet18 pre-trained models from the paper (in the folder `pretrained_models`) on CIFAR-10, and its corresponding isotropic sigma values for the test set (in the folder `isotropic_dd_sigmas`).
+Here is a link to pretrained models:
+Here is a link to isotropic sigmas:
 
 To run ANCER's optimization, create a destination folder for the optimized sigmas by running:
 
