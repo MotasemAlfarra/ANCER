@@ -1,67 +1,40 @@
 # ANCER: Anisotropic Certification via Sample-wise Volume Maximization
 
-This is the official code for the work titled:"ANCER: Anisotropic Certification via Sample-wise Volume Maximization"
+![ANCER illustration](img/ancer.png)
 
-prerprint: 
-
-![plot](./images/pull.png)
-
-
-### Setting up
-
-To reproduce our results, first you need to install a [Conda](https://www.anaconda.com/) environment with the right dependencies. You can do so by running the following line from the main directory:
+This repository contains the source code for the [ANCER Python package](https://pypi.org/project/ancer-python/), as well as scripts that allow one to reproduce the results from the paper [*"ANCER: Anisotropic Certification via Sample-wise Volume Maximization"*](https://arxiv.org/abs/2107.04570). If you use it, please cite it appropriately as:
 
 ```
-conda env create -f ancer.yml
+@misc{eiras2021ancer,
+    title={ANCER: Anisotropic Certification via Sample-wise Volume Maximization}, 
+    author={Francisco Eiras and Motasem Alfarra and M. Pawan Kumar and Philip H. S. Torr and Puneet K. Dokania and Bernard Ghanem and Adel Bibi},
+    year={2021},
+    eprint={2107.04570},
+    archivePrefix={arXiv}
+}
 ```
 
-Then, activate our environment by running:
+## Installing the package
+
+The ANCER package requires `python>=3.7`, and can be installed through `pip` as:
 
 ```
-conda activate ancer
+pip install ancer-python
 ```
 
-Now, you are ready to reproduce our results. 
+## Package contents
 
-### Running experiments
+This package requires and extends the optimization framework presented in ["Data Dependent Randomized Smoothing" (link to repository)](https://github.com/MotasemAlfarra/Data_Dependent_Randomized_Smoothing), and as such uses the same base classes and structure. 
 
-Note that ANCER requires a trained model and the corresponding isotropic sigmas produced with the code from ["Data Dependent Randomized Smoothing" (link to repository)](https://github.com/MotasemAlfarra/Data_Dependent_Randomized_Smoothing).
+In particular it contains an instance-wise optimization function, `optimize_ancer` that can be run on a batch of inputs, as well as a class `OptimizeANCERSmoothingParameters` which can be used to run this process for a given dataset and save the results to file. Examples of usage of the dataset optimization class can be found within the `scripts` folder.
 
-Here is a link to pretrained models:
+## Reproducing experiments
 
-Here is a link to isotropic sigmas:
+The code to reproduce the experiments presented in the paper is available within the `scripts` folder, which is divided into (i) a training folder for the l1 baselines, (ii) a console script to run the optimization of a dataset in `run_optimization_dataset.py` and (iii) a console script to certify a dataset with fixed or data-dependent thetas in `certify_dataset.py`. To use it, clone this repo into your local machine. Pre-trained models used in the results can be found [here]().
 
-To run ANCER's optimization, create a destination folder for the optimized sigmas by running:
+To run ANCER's optimization, simply navigate to the `scripts` folder and run `run_optimization_dataset.py` (run `python run_optimization_dataset.py --help` for help with the arguments). The output of this code will be a set of thetas saved in an output folder.
 
-```
-mkdir anisotropic_sigmas_for_cohen
-```
-
-followed by the command:
-
-```
-python ancer.py --norm l2 \
---model ${PATH_TO_PRETRAINED_MODEL} \
---isotropic-file ${PATH_TO_ISOTROPIC_SIGMA} \
---model-type resnet18 --dataset cifar10 \
---output-folder anisotropic_sigmas_for_cohen
-```
-where  `--model-type` coule be either `resnet18` or `wideresnet40` for CIFAR10 or  `resnet50` for ImageNet. 
-Note that this will run ANCER's optimization with the default hyperparameters detailed in our appendix for a the pretrained model with the isotropic sigmas as initialization. The output of this code will be a set of sigmas saved in `output-folder` for CIFAR-10 testset.
-
-Next, you need to certify the same model with the obtained anisotropic smoothing parameters. This requires running the following command:
-
-```
-python certify.py --norm l2 \
---sigma 0.12 \
---method ancer \
---outfile results.txt \
---model-type resnet18 --dataset cifar10 \
---model ${PATH_TO_PRETRAINED_MODEL} \
---optimized-sigmas anisotropic_sigmas_for_cohen
-```
-
-The output of this is a .txt file that is formatted as:
+Next, you can certify the same model with the obtained anisotropic smoothing parameters by running the `certify_dataset.py` script (run `python certify_dataset.py --help` for help with the arguments). The output of this process is a CSV file with the following header:
 
 ```
 "idx    label   predict    radius   radius_proxy    correct    min_sigma   time"
