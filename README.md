@@ -13,6 +13,7 @@ This repository contains the source code for the [ANCER Python package](https://
     archivePrefix={arXiv}
 }
 ```
+This repository is licensed under the terms of the MIT license.
 
 ## Installing the package
 
