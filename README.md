@@ -31,7 +31,7 @@ In particular it contains an instance-wise optimization function, `optimize_ance
 
 ## Reproducing experiments
 
-The code to reproduce the experiments presented in the paper is available within the `scripts` folder, which is divided into (i) a training folder for the l1 baselines, (ii) a console script to run the optimization of a dataset in `run_optimization_dataset.py` and (iii) a console script to certify a dataset with fixed or data-dependent thetas in `certify_dataset.py`. To use it, clone this repo into your local machine. Pre-trained models used in the results can be found [here]().
+The code to reproduce the experiments presented in the paper is available within the `scripts` folder, which is divided into (i) a training folder for the l1 baselines, (ii) a console script to run the optimization of a dataset in `run_optimization_dataset.py` and (iii) a console script to certify a dataset with fixed or data-dependent thetas in `certify_dataset.py`. To use it, clone this repo into your local machine. Pre-trained models used in the results can be found [here](https://drive.google.com/drive/folders/1t4IGRDmQ_qA8UVhkJYa3RWXFM6v-5vm5?usp=sharing).
 
 To run ANCER's optimization, simply navigate to the `scripts` folder and run `run_optimization_dataset.py` (run `python run_optimization_dataset.py --help` for help with the arguments). The output of this code will be a set of thetas saved in an output folder.
 
