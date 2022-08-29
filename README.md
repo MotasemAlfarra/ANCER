@@ -2,7 +2,7 @@
 
 ![ANCER illustration](img/ancer.png)
 
-This repository contains the source code for the [ANCER Python package](https://pypi.org/project/ancer-python/), as well as scripts that allow one to reproduce the results from the paper [*"ANCER: Anisotropic Certification via Sample-wise Volume Maximization"*](https://arxiv.org/abs/2107.04570). If you use it, please cite it appropriately as:
+This repository contains the source code for the [ANCER Python package](https://pypi.org/project/ancer-python/), as well as scripts that allow one to reproduce the results from the paper [*"ANCER: Anisotropic Certification via Sample-wise Volume Maximization"*](https://arxiv.org/abs/2107.04570). This work was accepted to the Transactions on Machine Learning Research (TMLR). If you use it, please cite it appropriately as:
 
 ```
 @misc{eiras2021ancer,
