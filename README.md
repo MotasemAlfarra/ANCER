@@ -2,15 +2,17 @@
 
 ![ANCER illustration](img/ancer.png)
 
-This repository contains the source code for the [ANCER Python package](https://pypi.org/project/ancer-python/), as well as scripts that allow one to reproduce the results from the paper [*"ANCER: Anisotropic Certification via Sample-wise Volume Maximization"*](https://arxiv.org/abs/2107.04570). This work was accepted to the Transactions on Machine Learning Research (TMLR). If you use it, please cite it appropriately as:
+This repository contains the source code for the [ANCER Python package](https://pypi.org/project/ancer-python/), as well as scripts that allow one to reproduce the results from the paper [*"ANCER: Anisotropic Certification via Sample-wise Volume Maximization"*](https://openreview.net/pdf?id=7j0GI6tPYi). This work was accepted to the Transactions on Machine Learning Research (TMLR). If you use it, please cite it appropriately as:
 
 ```
-@misc{eiras2021ancer,
-    title={ANCER: Anisotropic Certification via Sample-wise Volume Maximization}, 
-    author={Francisco Eiras and Motasem Alfarra and M. Pawan Kumar and Philip H. S. Torr and Puneet K. Dokania and Bernard Ghanem and Adel Bibi},
-    year={2021},
-    eprint={2107.04570},
-    archivePrefix={arXiv}
+@article{
+eiras2022ancer,
+title={{ANCER}: Anisotropic Certification via Sample-wise Volume Maximization},
+author={Francisco Eiras and Motasem Alfarra and Philip Torr and M. Pawan Kumar and Puneet K. Dokania and Bernard Ghanem and Adel Bibi},
+journal={Transactions of Machine Learning Research},
+year={2022},
+url={https://openreview.net/forum?id=7j0GI6tPYi},
+note={}
 }
 ```
 This repository is licensed under the terms of the MIT license.
